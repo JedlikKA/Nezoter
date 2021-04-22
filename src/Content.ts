@@ -24,6 +24,7 @@ export default class Content {
         // Kezd a kódolást innen -->
 
         const mo: Megoldas = new Megoldas("foglaltsag.txt", "kategoria.txt", s, sz, f, k, bal_foglalt, jobb_foglalt);
+        res.write(`3. feladat: ${mo.GetEladottArany}\n`);
 
         // <---- Fejezd be a kódolást
 
