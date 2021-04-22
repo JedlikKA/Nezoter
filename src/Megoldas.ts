@@ -8,9 +8,11 @@ export default class Megoldas {
     public constructor(forrasf: string, forrask: string, s: number, sz: number, f: number, k: number, bal_foglalt: boolean, jobb_foglalt: boolean) {
         const fsorok: string[] = fs.readFileSync(forrasf).toString().split("\n");
         const ksorok: string[] = fs.readFileSync(forrask).toString().split("\n");
-        for (let i = 1; i < fsorok.length; i++) {
-            if (fsorok[i].length != 0) {
-                this._székek.push(new Nezoter(s, sz, f, k, bal_foglalt, jobb_foglalt));
+        for (let i = 0; i < fsorok.length; i++) {
+            for (let j = 0; j < ksorok.length; j++) {
+                if (fsorok[i].length != 0) {
+                    this._székek.push(new Nezoter(s, sz, f, k, bal_foglalt, jobb_foglalt));
+                }
             }
         }
     }
