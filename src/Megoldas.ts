@@ -16,7 +16,7 @@ export default class Megoldas {
                 ossz++;
             }
         }
-        return String.Format(`Az előadásra eddig ${db} jegyet adtak el, ez a nézőtér ${<number>(<number>Math.round((db / ossz) * 100))} % -a.`);
+        return `Az előadásra eddig ${db} jegyet adtak el, ez a nézőtér ${<number>(<number>Math.round((db / ossz) * 100))} % -a.`;
     }
 
     public constructor(forrasf: string, forrask: string, s: number, sz: number, f: number, k: number, bal_foglalt: boolean, jobb_foglalt: boolean) {
